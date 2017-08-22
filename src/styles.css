@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+body {
+  /* padding: 2em 23em; */
+  background: lightgray;
+  margin: 0;
+  padding: 0 15px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.mat-toolbar {
+  margin: 0 -15px;
+  width: inherit!important
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-card {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.example-card-avatar {
+  background-image: url('~/assets/images/vodafone-logo-x.jpg');
+  background-size: cover;
+}
+
+.example-header-image {
+  background-size: cover;
+  height: 200px;
+}
+
+@media screen and (min-width:768px) {
+  .example-card {
+    width: 33.3333%;
+    margin: 15px 0;
+  }
+}
