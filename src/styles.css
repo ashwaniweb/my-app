@@ -1,20 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i');
 body {
   /* padding: 2em 23em; */
   background: lightgray;
   margin: 0;
-  padding: 0 15px;
+  font-family: 'Roboto', sans-serif;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.mat-toolbar {
-  margin: 0 -15px;
-  width: inherit!important
+.mat-toolbar .mat-button {
+  min-width: inherit
+}
+
+.mat-sidenav .material-icons {
+  color: #424242;
+}
+
+app-dashboard .material-icons {
+  color: #e91e63;
+}
+
+.mat-toolbar.mat-primary {
+  padding: 0;
 }
 
 .example-icon {
@@ -45,4 +57,36 @@ body {
     width: 33.3333%;
     margin: 15px 0;
   }
+}
+
+.mat-list-icon {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.mat-sidenav-container.example-sidenav-fab-container {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  background: transparent;
+}
+
+.example-sidenav-fab-container.mat-sidenav-opened {
+  overflow: hidden;
+  position: fixed;
+}
+
+.example-sidenav-fab-container .mat-sidenav-content {
+  width: 100%;
+}
+
+.example-sidenav-fab-container md-sidenav {
+  max-width: 400px;
+  width: 250px;
+  margin-left: -20px;
+  padding: 0;
+  position: fixed;
+}
+
+.example-scrolling-content {
+  overflow: auto;
 }

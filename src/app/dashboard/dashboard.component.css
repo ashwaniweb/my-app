@@ -1,0 +1,11 @@
+.mat-card {
+  width: 92%;
+  height: 92%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mat-card i {
+  font-size: 7rem;
+}
