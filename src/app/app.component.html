@@ -15,31 +15,35 @@
   <md-sidenav #sidenav mode="over">
     <md-nav-list>
       <md-list-item>
-        <md-icon>home</md-icon> <a md-line routerLinkActive="active" routerLink="/">Home</a>
+        <md-icon>home</md-icon> <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="/">Home</a>
       </md-list-item>
       <md-divider></md-divider>
       <md-list-item>
-        <md-icon>dashboard</md-icon> <a md-line routerLinkActive="active" routerLink="/dashboard">Dashboard</a>
+        <md-icon>dashboard</md-icon> <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="/dashboard">Dashboard</a>
       </md-list-item>
       <md-divider></md-divider>
       <md-list-item>
-        <md-icon>account_circle</md-icon> <a md-line href="#">Primary</a>
+        <md-icon>account_circle</md-icon> <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="/categories">Categories</a>
       </md-list-item>
       <md-divider></md-divider>
       <md-list-item>
-        <md-icon>photo</md-icon> <a md-line href="#">Photo</a>
+        <md-icon>photo</md-icon> <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="/photos">Photos</a>
       </md-list-item>
       <md-divider></md-divider>
       <md-list-item>
-        <md-icon>group</md-icon> <a md-line href="#">Group</a>
+        <md-icon>group</md-icon> <a md-line (click)="sidenav.close()" href="#">Group</a>
       </md-list-item>
       <md-divider></md-divider>
       <md-list-item>
-        <md-icon>delete</md-icon> <a md-line href="#">Delete Account</a>
+        <md-icon>delete</md-icon> <a md-line (click)="sidenav.close()" href="#">Delete Account</a>
       </md-list-item>
       <md-divider></md-divider>
       <md-list-item>
-        <md-icon>settings</md-icon> <a md-line routerLinkActive="active" routerLink="setting">Settings</a>
+        <md-icon>settings</md-icon> <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="setting">Settings</a>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item>
+        <md-icon>login</md-icon> <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="login">Login</a>
       </md-list-item>
       <md-divider></md-divider>
     </md-nav-list>

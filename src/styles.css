@@ -54,7 +54,7 @@ app-dashboard .material-icons {
 
 @media screen and (min-width:768px) {
   .example-card {
-    width: 33.3333%;
+    /* width: 33.3333%; */
     margin: 15px 0;
   }
 }
