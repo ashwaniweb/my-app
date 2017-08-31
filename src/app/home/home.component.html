@@ -6,10 +6,11 @@
   </md-card-header>
   <img md-card-image class="example-header-image" src="{{data.thumbnailUrl}}">
   <md-card-content>
-    <p>{{data.content}}</p>
+    <p>{{data.content.short}}</p>
   </md-card-content>
   <md-card-actions>
-    <button md-button><i class="material-icons">thumb_up</i></button>
-    <button md-button><i class="material-icons">share</i></button>
+    <button md-mini-fab color="primary"><i class="material-icons">thumb_up</i></button>
+    <button md-mini-fab color="accent"><i class="material-icons">share</i></button>
+    <button md-mini-fab color="primary" routerLinkActive="active" routerLink="detail"><i class="material-icons">chevron_right</i></button>
   </md-card-actions>
 </md-card>

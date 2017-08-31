@@ -1,3 +1,19 @@
-<p>
-  detail works!
-</p>
+<md-card class="" *ngFor="let data of (myData ? myData.slice(0,1): []); let i = index">
+  <img md-card-image class="example-header-image" src="{{data.thumbnailUrl}}">
+  <md-card-header>
+    <md-card-title>
+      <h3>{{data.title}}</h3>
+    </md-card-title>
+    <md-card-subtitle>
+      {{data.author}}
+      <div style="float:right">12:40AM, 31 Aug 2017</div>
+    </md-card-subtitle>
+  </md-card-header>
+  <md-card-content>
+    <hr/>
+    <p>{{data.content.long}}</p>
+  </md-card-content>
+  <md-card-actions>
+    <button md-raised-button color="primary" routerLinkActive="active" routerLink="/"><i class="material-icons">navigate_before</i> Back to List</button>
+  </md-card-actions>
+</md-card>

@@ -8,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { PhotosComponent } from './photos/photos.component';
+import { GroupsComponent } from './groups/groups.component';
+import { DetailComponent } from './detail/detail.component';
 
 export const router: Routes = [
   {
@@ -39,6 +41,16 @@ export const router: Routes = [
     path: 'categories',
     component: CategoriesComponent,
     data: { title: 'Categories' }
+  },
+  {
+    path: 'groups',
+    component: GroupsComponent,
+    data: { title: 'groups' }
+  },
+  {
+    path: 'detail',
+    component: DetailComponent,
+    data: { title: 'Detail' }
   }
 ]
 export const routes: ModuleWithProviders = RouterModule.forRoot(router);

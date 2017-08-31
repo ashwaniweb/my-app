@@ -9,3 +9,8 @@
 .mat-card i {
   font-size: 7rem;
 }
+
+.app-dashboard {
+  margin: 15px;
+  display: block;
+}

@@ -49,6 +49,7 @@ import { ContentComponent } from './content/content.component';
 import { HomeComponent } from './home/home.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { PhotosComponent } from './photos/photos.component';
+import { GroupsComponent } from './groups/groups.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,6 +63,7 @@ import { PhotosComponent } from './photos/photos.component';
     HomeComponent,
     CategoriesComponent,
     PhotosComponent,
+    GroupsComponent,
   ],
   imports: [
     BrowserModule,
