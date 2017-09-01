@@ -1,4 +1,4 @@
-<md-grid-list cols="2" rowHeight="2:2">
+<md-grid-list cols="2" rowHeight="2:2" class="photoWrap">
   <md-grid-tile *ngFor="let data of (photosData ? photosData.slice(0,10): []); let i = index">
     <img md-card-image class="example-header-image" src="{{data.thumbnailUrl}}">
   </md-grid-tile>
