@@ -18,9 +18,9 @@ export class PhotosComponent implements OnInit {
   constructor(private http:Http) {
     this.http.get('/assets/data/photos.json')
     .map(response => response.json())
-    .subscribe(res => this.myData = res);    
+    .subscribe(res => this.photosData = res);    
   }
-  myData: Array<any>;
+  photosData: Array<any>;
   title = 'app';
   ngOnInit() {
   }

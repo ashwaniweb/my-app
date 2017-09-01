@@ -11,9 +11,9 @@ export class HomeComponent implements OnInit {
   constructor(private http:Http) {
     this.http.get('/assets/data/home.json')
     .map(response => response.json())
-    .subscribe(res => this.myData = res);    
+    .subscribe(res => this.homeData = res);    
   }
-  myData: Array<any>;
+  homeData: Array<any>;
   title = 'app';
   ngOnInit() {
   }

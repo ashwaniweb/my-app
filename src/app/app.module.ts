@@ -39,12 +39,11 @@ import {
   MdTableModule,
   MdTabsModule,
   MdTooltipModule} from '@angular/material';
-import { SidebarComponent } from './sidebar/sidebar.component';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SettingComponent } from './setting/setting.component';
 import { LoginComponent } from './login/login.component';
 import { DetailComponent } from './detail/detail.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ContentComponent } from './content/content.component';
 import { HomeComponent } from './home/home.component';
 import { CategoriesComponent } from './categories/categories.component';
@@ -53,12 +52,10 @@ import { GroupsComponent } from './groups/groups.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent,
     DashboardComponent,
     SettingComponent,
     LoginComponent,
     DetailComponent,
-    ToolbarComponent,
     ContentComponent,
     HomeComponent,
     CategoriesComponent,
