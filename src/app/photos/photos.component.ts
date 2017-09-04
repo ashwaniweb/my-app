@@ -21,7 +21,6 @@ export class PhotosComponent implements OnInit {
     .subscribe(res => this.photosData = res);    
   }
   photosData: Array<any>;
-  title = 'app';
   ngOnInit() {
   }
 }

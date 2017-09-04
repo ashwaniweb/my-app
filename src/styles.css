@@ -1,76 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i');
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* Global Things */
+
 body {
-  /* padding: 2em 23em; */
-  /* background: lightgray; */
-  margin: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 300;
   line-height: 1.5;
-  overflow: hidden;
 }
 
-* {
-  box-sizing: border-box;
+*:focus {
+  outline: 0 none !important;
 }
 
-.mat-toolbar .mat-button {
-  min-width: inherit
-}
-
-.mat-sidenav .material-icons {
-  color: #424242;
-}
-
-app-dashboard .material-icons {
-  color: #e91e63;
-}
-
-.mat-toolbar.mat-primary {
-  padding: 0;
+#container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .example-icon {
   padding: 0 14px;
 }
 
-.example-spacer {
-  flex: 1 1 auto;
+
+/* Toolbar */
+
+.mat-toolbar .mat-button {
+  min-width: inherit
 }
 
-.example-card {
-  /* width: 100%; */
-  margin: 15px 4px;
+.mat-toolbar.mat-primary {
+  padding: 0;
 }
 
-.example-card-avatar {
-  background-image: url('~/assets/images/vodafone-logo-x.jpg');
-  background-size: cover;
-}
 
-.example-header-image {
-  background-size: cover;
-  height: auto;
-}
+/* SideBar */
 
-@media screen and (min-width:768px) {
-  .example-card {
-    margin: 15px auto;
-  }
-}
-
-.mat-list-icon {
-  color: rgba(0, 0, 0, 0.54);
-}
-
-.mat-drawer-content {
-  padding: 0 15px;
-  width: 100%;
-  max-width: 640px;
-  margin-left: auto!important;
-  margin-right: auto!important;
+.mat-sidenav .material-icons {
+  color: #424242;
 }
 
 .mat-sidenav-container.example-sidenav-fab-container {
@@ -87,13 +57,43 @@ app-dashboard .material-icons {
 }
 
 .example-sidenav-fab-container md-sidenav {
-  max-width: 400px;
   width: 250px;
-  /* margin-left: -20px; */
   padding: 0;
   position: fixed;
 }
 
 .example-scrolling-content {
   overflow: auto;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-card {
+  margin: 15px 4px;
+}
+
+.example-card-avatar {
+  background-image: url('~/assets/images/vodafone-logo-x.jpg');
+  background-size: cover;
+}
+
+.example-header-image {
+  background-size: cover;
+  height: auto;
+}
+
+.mat-drawer-content {
+  padding: 0 15px;
+  width: 100%;
+  max-width: 640px;
+  margin-left: auto!important;
+  margin-right: auto!important;
+}
+
+@media screen and (min-width:768px) {
+  .example-card {
+    margin: 15px auto;
+  }
 }

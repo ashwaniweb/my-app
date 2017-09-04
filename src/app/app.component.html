@@ -1,60 +1,56 @@
 <!--The whole content below can be removed with the new code.-->
-<md-toolbar color="primary">
-  <button md-button (click)="sidenav.toggle()"><md-icon>menu</md-icon></button>
-  <span>MyCompany</span>
-  <span class="example-spacer"></span>
-  <md-icon class="example-icon">favorite</md-icon>
-  <md-icon class="example-icon">delete</md-icon>
-  <button md-button [mdMenuTriggerFor]="appMenu"><md-icon>more_vert</md-icon></button>
-  <md-menu #appMenu="mdMenu">
-    <button md-menu-item> Settings </button>
-    <button md-menu-item> Help </button>
-  </md-menu>
-</md-toolbar>
-<md-sidenav-container class="example-sidenav-fab-container">
-  <md-sidenav #sidenav mode="over">
-    <md-nav-list>
-      <md-list-item>
-        <md-icon>home</md-icon>
-        <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="/">Home</a>
-      </md-list-item>
-      <md-divider></md-divider>
-      <md-list-item>
-        <md-icon>dashboard</md-icon>
-        <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="/dashboard">Dashboard</a>
-      </md-list-item>
-      <md-divider></md-divider>
-      <md-list-item>
-        <md-icon>account_circle</md-icon>
-        <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="/categories">Categories</a>
-      </md-list-item>
-      <md-divider></md-divider>
-      <md-list-item>
-        <md-icon>photo</md-icon>
-        <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="/photos">Photos</a>
-      </md-list-item>
-      <md-divider></md-divider>
-      <md-list-item>
-        <md-icon>group</md-icon>
-        <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="/groups">Group</a>
-      </md-list-item>
-      <md-divider></md-divider>
-      <md-list-item>
-        <md-icon>delete</md-icon>
-        <a md-line (click)="sidenav.close()" href="#">Delete Account</a>
-      </md-list-item>
-      <md-divider></md-divider>
-      <md-list-item>
-        <md-icon>settings</md-icon>
-        <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="setting">Settings</a>
-      </md-list-item>
-      <md-divider></md-divider>
-      <md-list-item>
-        <md-icon>login</md-icon>
-        <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="login">Login</a>
-      </md-list-item>
-      <md-divider></md-divider>
-    </md-nav-list>
-  </md-sidenav>
-  <router-outlet></router-outlet>
-</md-sidenav-container>
+<div id="container">
+  <md-toolbar color="primary">
+    <button md-button (click)="sidenav.toggle()"><md-icon>menu</md-icon></button>
+    <span>Home {{heading}}</span>
+    <span class="example-spacer"></span>
+    <md-icon class="example-icon">favorite</md-icon>
+    <button md-button [mdMenuTriggerFor]="appMenu"><md-icon>more_vert</md-icon></button>
+    <md-menu #appMenu="mdMenu">
+      <button md-menu-item> Settings </button>
+      <button md-menu-item> Help </button>
+    </md-menu>
+  </md-toolbar>
+  <md-sidenav-container class="example-sidenav-fab-container">
+    <md-sidenav #sidenav mode="over">
+      <md-nav-list>
+        <md-list-item>
+          <md-icon>home</md-icon>
+          <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="/">Home</a>
+        </md-list-item>
+        <md-divider></md-divider>
+        <md-list-item>
+          <md-icon>dashboard</md-icon>
+          <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="/dashboard">Dashboard</a>
+        </md-list-item>
+        <md-divider></md-divider>
+        <md-list-item>
+          <md-icon>account_circle</md-icon>
+          <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="/categories">Categories</a>
+        </md-list-item>
+        <md-divider></md-divider>
+        <md-list-item>
+          <md-icon>photo</md-icon>
+          <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="/photos">Photos</a>
+        </md-list-item>
+        <md-divider></md-divider>
+        <md-list-item>
+          <md-icon>group</md-icon>
+          <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="/groups">Group</a>
+        </md-list-item>
+        <md-divider></md-divider>
+        <md-list-item>
+          <md-icon>settings</md-icon>
+          <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="setting">Settings</a>
+        </md-list-item>
+        <md-divider></md-divider>
+        <md-list-item>
+          <md-icon>lock</md-icon>
+          <a md-line (click)="sidenav.close()" routerLinkActive="active" routerLink="login">Login</a>
+        </md-list-item>
+        <md-divider></md-divider>
+      </md-nav-list>
+    </md-sidenav>
+    <router-outlet></router-outlet>
+  </md-sidenav-container>
+</div>

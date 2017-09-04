@@ -1,3 +1,13 @@
 .photoWrap {
   margin: 0 -15px;
 }
+
+.mat-card-image {
+  width: auto;
+}
+
+@media (max-width: 600px) {
+  .mat-card-image {
+    width: auto;
+  }
+}

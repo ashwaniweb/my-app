@@ -15,12 +15,18 @@ export const router: Routes = [
   {
     path: '',
     component: HomeComponent,
-    data: { title: 'Home' }
+    data: {
+      title: 'Home',
+      heading: 'Home'
+    }
   },
   {
     path: 'login',
     component: LoginComponent,
-    data: { title: 'Login' }
+    data: {
+      title: 'Login',
+      heading: 'Login'
+  }
   },
   {
     path: 'photos',
