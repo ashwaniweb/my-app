@@ -26,6 +26,24 @@ body {
 }
 
 
+/******Splash Screen CSS****/
+
+#pre-bootstrap {
+  background-color: #262626;
+  background-image: url('./assets/images/splashScreen.png');
+  background-size: cover;
+  bottom: 0px;
+  left: 0px;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  z-index: 999999;
+}
+
+
+/******@end Splash Screen CSS****/
+
+
 /* Toolbar */
 
 .mat-toolbar .mat-button {
@@ -34,6 +52,9 @@ body {
 
 .mat-toolbar.mat-primary {
   padding: 0;
+  position: fixed;
+  top: 0;
+  z-index: 55555;
 }
 
 
@@ -44,7 +65,9 @@ body {
 }
 
 .mat-sidenav-container.example-sidenav-fab-container {
-  height: calc(100vh - 56px);
+  min-height: calc(100vh - 56px);
+  overflow: auto;
+  margin-top: 56px;
 }
 
 .example-sidenav-fab-container.mat-sidenav-opened {
