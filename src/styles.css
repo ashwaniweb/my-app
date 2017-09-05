@@ -66,7 +66,7 @@ body {
 
 .mat-sidenav-container.example-sidenav-fab-container {
   min-height: calc(100vh - 56px);
-  overflow: auto;
+  /* overflow: hidden; */
   /* margin-top: 56px; */
 }
 
@@ -113,6 +113,7 @@ body {
   max-width: 640px;
   margin-left: auto!important;
   margin-right: auto!important;
+  overflow: initial!important;
 }
 
 @media screen and (min-width:768px) {

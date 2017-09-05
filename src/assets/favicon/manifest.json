@@ -13,5 +13,6 @@
   ],
   "theme_color": "#32bcad",
   "background_color": "#32bcad",
+  "background_image": "splashScreen.png",
   "display": "standalone"
 }
