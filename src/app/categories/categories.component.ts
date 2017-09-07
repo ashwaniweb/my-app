@@ -8,11 +8,25 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
-  constructor(private http:Http) {
-    this.http.get('/assets/data/categories.json').map(response => response.json()).subscribe(res => this.myData = res);
+  categories: Array<any>;
+  title = "Categories";
+
+  constructor(private http:Http){
+    this.http.get('./assets/data/categories.json')
+    .map(response => response.json().category)
+    .subscribe(res => this.categories = res);
   }
-  myData: Array<any>;
-  title = 'app';
+  
+  likeMe(i){
+    if(this.categories[i].liked == 0)
+      this.categories[i].liked = 1;
+    else
+      this.categories[i].liked = 0;
+  }
+  
+  deleteMe(i){
+    this.categories.splice(i,1);
+  }  
   ngOnInit() {
   }
 

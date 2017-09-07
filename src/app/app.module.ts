@@ -1,44 +1,12 @@
-import { BrowserModule,Title } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule,FormControl, Validators } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { routes } from './app.router';
+import { HttpModule} from '@angular/http';
+import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
+import { routes } from './app.router';
 import 'hammerjs';
-import {
-  MdButtonModule,
-  MdCardModule,
-  MdMenuModule,
-  MdToolbarModule,
-  MdIconModule,
-  MdSidenavModule,
-  MdListModule,
-  MdGridListModule,
-  MdAutocompleteModule,
-  MdButtonToggleModule,
-  MdCheckboxModule,
-  MdChipsModule,
-  MdCoreModule,
-  MdDatepickerModule,
-  MdDialogModule,
-  MdExpansionModule,
-  MdFormFieldModule,
-  MdInputModule,
-  MdNativeDateModule,
-  MdPaginatorModule,
-  MdProgressBarModule,
-  MdProgressSpinnerModule,
-  MdRadioModule,
-  MdRippleModule,
-  MdSelectModule,
-  MdSliderModule,
-  MdSlideToggleModule,
-  MdSnackBarModule,
-  MdSortModule,
-  MdTableModule,
-  MdTabsModule,
-  MdTooltipModule} from '@angular/material';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SettingComponent } from './setting/setting.component';
@@ -68,40 +36,7 @@ import { GroupsComponent } from './groups/groups.component';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MdButtonModule,
-    MdMenuModule,
-    MdCardModule,
-    MdToolbarModule,
-    MdIconModule,
-    MdSidenavModule,
-    MdListModule,
-    MdGridListModule,
-    MdAutocompleteModule,
-    MdButtonToggleModule,
-    MdCheckboxModule,
-    MdChipsModule,
-    MdCoreModule,
-    MdDatepickerModule,
-    MdDialogModule,
-    MdExpansionModule,
-    MdGridListModule,
-    MdIconModule,
-    MdFormFieldModule,
-    MdInputModule,
-    MdListModule,
-    MdNativeDateModule,
-    MdPaginatorModule,
-    MdProgressBarModule,
-    MdProgressSpinnerModule,
-    MdRadioModule,
-    MdRippleModule,
-    MdSelectModule,
-    MdSlideToggleModule,
-    MdSnackBarModule,
-    MdSortModule,
-    MdTableModule,
-    MdTabsModule,
-    MdTooltipModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

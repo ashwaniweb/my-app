@@ -1,16 +1,56 @@
-<md-card class="example-card" *ngFor="let data of (homeData ? homeData.slice(0,10): []); let i = index">
+<md-card class="example-card" *ngFor='let spaceScreen of spaceScreens; let i = index'>
   <md-card-header>
     <div md-card-avatar class="example-card-avatar"></div>
-    <md-card-title>{{data.title}}</md-card-title>
-    <md-card-subtitle>{{data.author}}</md-card-subtitle>
+    <md-card-title>{{spaceScreen.title}}</md-card-title>
+    <md-card-subtitle>{{spaceScreen.author}}</md-card-subtitle>
   </md-card-header>
-  <img md-card-image class="example-header-image" src="{{data.thumbnailUrl}}">
+  <img md-card-image class="example-header-image" src="{{spaceScreen.thumbnailUrl}}">
   <md-card-content>
-    <p>{{data.content.short}}</p>
+    <p>{{spaceScreen.content.short}}</p>
   </md-card-content>
   <md-card-actions>
-    <button md-mini-fab color="primary"><i class="material-icons">thumb_up</i></button>
-    <button md-mini-fab color="accent"><i class="material-icons">share</i></button>
-    <button md-mini-fab color="primary" routerLinkActive="active" routerLink="detail"><i class="material-icons">chevron_right</i></button>
+    <button md-mini-fab color="primary">
+      <i class="material-icons">thumb_up</i>
+    </button>
+    <!-- <button md-mini-fab color="warm" [mdfabTriggerFor]="appMenu">
+        <md-icon md-svg-src="img/icons/menu.svg"></md-icon>
+      </button>
+
+    <md-fab-actions>
+      <md-button class="md-fab md-raised md-mini">
+        <md-icon aria-label="Twitter">twitter</md-icon>
+      </md-button>
+      <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
+        <md-icon md-svg-src="img/icons/facebook.svg" aria-label="Facebook"></md-icon>
+      </md-button>
+      <md-button aria-label="Google Hangout" class="md-fab md-raised md-mini">
+        <md-icon md-svg-src="img/icons/hangout.svg" aria-label="Google Hangout"></md-icon>
+      </md-button>
+    </md-fab-actions> -->
+
+    <button md-mini-fab color="accent" [mdMenuTriggerFor]="appMenu">
+      <i class="material-icons">share</i>
+    </button>
+    <md-menu #appMenu="mdMenu">
+      <button md-menu-item>
+      <md-icon> dialpad </md-icon>
+      </button>
+      <button md-menu-item disabled>
+      <md-icon> voicemail </md-icon>
+      </button>
+      <button md-menu-item>
+      <md-icon> notifications_off </md-icon>
+      </button>
+    </md-menu>
+    <!-- <fab dir="up">
+      <fab-toggle>+</fab-toggle>
+      <fab-button>A</fab-button>
+      <fab-button>B</fab-button>
+      <fab-button>C</fab-button>
+      <fab-button>D</fab-button>
+    </fab> -->
+    <button md-mini-fab color="primary" routerLinkActive="active" routerLink="detail">
+      <i class="material-icons">chevron_right</i>
+    </button>
   </md-card-actions>
 </md-card>

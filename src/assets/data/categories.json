@@ -1,6 +1,8 @@
-[{
+{
+  "category": [
+  {
     "catId": 1,
-    "categoryName": "accusamus beatae",
+    "categoryName": "accusamus beatae ",
     "vendor": "Ashwani",
     "url": "http://placehold.it/600/92c952",
     "categoryThumb": "https://unsplash.it/350/150/?image=0",
@@ -77,5 +79,5 @@
     "url": "http://placehold.it/600/92c952",
     "categoryThumb": "https://unsplash.it/350/150/?image=1070",
     "categoryDescription": "The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting."
-  }
-]
+  }]
+}

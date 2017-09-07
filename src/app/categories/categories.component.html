@@ -1,19 +1,19 @@
-<md-card class="example-card" *ngFor="let data of (myData ? myData.slice(0,10): []); let i = index">
-  <img md-card-image class="example-header-image" src="{{data.categoryThumb}}">
+<md-card class="example-card" *ngFor='let spaceScreen of spaceScreens; let i = index'>
+  <img md-card-image class="example-header-image" src="{{category.categoryThumb}}">
   <md-card-header>
     <div md-card-avatar class="example-card-avatar"></div>
-    <md-card-title>{{data.categoryName}}</md-card-title>
-    <md-card-subtitle>{{data.vendor}}</md-card-subtitle>
+    <md-card-title>{{category.categoryName}}</md-card-title>
+    <md-card-subtitle>{{category.vendor}}</md-card-subtitle>
   </md-card-header>
-  <!-- <md-card-content>
-    <p>{{data.categoryDescription}}</p>
-  </md-card-content> -->
   <md-card-actions>
-    <button md-button><i class="material-icons">thumb_up</i></button>
-    <button md-button><i class="material-icons">share</i></button>
+    <button md-button (click)="likeMe(i)">
+      <i class="material-icons md-18" [class.red-color]="category.liked == '1'">thumb_up</i> Like
+    </button>
+    <button md-button (click)="deleteMe(i)">
+      <i class="material-icons md-18">delete</i> Delete
+    </button>
   </md-card-actions>
 </md-card>
-
 <!-- <md-card *ngFor="let data of (myData ? myData.slice(0,10): []); let i = index">
   <md-card-title>Categories</md-card-title>
   <md-list>

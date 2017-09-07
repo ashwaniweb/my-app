@@ -9,13 +9,14 @@ import 'rxjs/add/operator/map';
   moduleId: module.id
 })
 export class DetailComponent implements OnInit {
-  constructor(private http:Http) {
-    this.http.get('/assets/data/home.json')
-    .map(response => response.json())
-    .subscribe(res => this.myData = res);    
-  }
-  myData: Array<any>;
-  title = 'app';
+  title = 'Home';
+  spaceScreens: Array<any>;
+
+  constructor(private http:Http){
+    this.http.get('./assets/data/home.json')
+    .map(response => response.json().screenshot)
+    .subscribe(res => this.spaceScreens = res);
+  }  
   ngOnInit() {
   }
 

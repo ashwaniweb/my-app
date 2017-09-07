@@ -57,6 +57,6 @@ export const router: Routes = [
     path: 'detail',
     component: DetailComponent,
     data: { title: 'Detail' }
-  }
+  },
 ]
 export const routes: ModuleWithProviders = RouterModule.forRoot(router);
