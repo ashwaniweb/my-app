@@ -7,16 +7,16 @@ import 'rxjs/add/operator/map';
   templateUrl: './categories.component.html',
   styleUrls: ['./categories.component.css']
 })
-export class CategoriesComponent implements OnInit {
-  categories: Array<any>;
-  title = "Categories";
 
+export class CategoriesComponent implements OnInit {
+  title = 'Home';
+  categories: Array<any>;
+  
   constructor(private http:Http){
     this.http.get('./assets/data/categories.json')
     .map(response => response.json().category)
     .subscribe(res => this.categories = res);
   }
-  
   likeMe(i){
     if(this.categories[i].liked == 0)
       this.categories[i].liked = 1;
@@ -29,5 +29,4 @@ export class CategoriesComponent implements OnInit {
   }  
   ngOnInit() {
   }
-
 }
