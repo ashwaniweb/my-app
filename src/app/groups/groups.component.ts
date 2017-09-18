@@ -96,36 +96,46 @@ export class ExampleDataSource extends DataSource<any> {
   get filter(): string { return this._filterChange.value; }
   set filter(filter: string) { this._filterChange.next(filter); }
 
-  constructor(private _exampleDatabase: ExampleDatabase, private _paginator: MdPaginator, private _sort: MdSort) {
+  filteredData: UserData[] = [];
+  renderedData: UserData[] = [];
+
+  constructor(private _exampleDatabase: ExampleDatabase,
+    private _paginator: MdPaginator,
+    private _sort: MdSort) {
     super();
-  }
+    this._filterChange.subscribe(() => this._paginator.pageIndex = 0);
+}
 
   /** Connect function called by the table to retrieve one stream containing the data to render. */
   connect(): Observable<UserData[]> {
     const displayDataChanges = [
       this._exampleDatabase.dataChange,
-      this._paginator.page,
       this._sort.mdSortChange,
       this._filterChange,
+      this._paginator.page,
     ];
     return Observable.merge(...displayDataChanges).map(() => {
-      const data = this.getSortedData();
-
-      const data1 = this._exampleDatabase.data.slice().filter((item: UserData) => {
+      // Filter data
+      this.filteredData = this._exampleDatabase.data.slice().filter((item: UserData) => {
         let searchStr = (item.name + item.email).toLowerCase();
         return searchStr.indexOf(this.filter.toLowerCase()) != -1;
       });
-      // Grab the page's slice of data.
+
+      // Sort filtered data
+      const sortedData = this.sortData(this.filteredData.slice());
+
+      // Grab the page's slice of the filtered sorted data.
       const startIndex = this._paginator.pageIndex * this._paginator.pageSize;
-      return data.splice(startIndex, this._paginator.pageSize);
+      this.renderedData = sortedData.splice(startIndex, this._paginator.pageSize);
+      return this.renderedData;
+
     });
   }
 
   disconnect() {}
 
   /** Returns a sorted copy of the database data. */
-  getSortedData(): UserData[] {
-    const data = this._exampleDatabase.data.slice();
+  sortData(data: UserData[]): UserData[] {
     if (!this._sort.active || this._sort.direction == '') { return data; }
 
     return data.sort((a, b) => {
@@ -144,5 +154,5 @@ export class ExampleDataSource extends DataSource<any> {
 
       return (valueA < valueB ? -1 : 1) * (this._sort.direction == 'asc' ? 1 : -1);
     });
-  }
+  }  
 }

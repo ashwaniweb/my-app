@@ -1,13 +1,12 @@
 <div class="example-container mat-elevation-z8">
   <div class="example-header">
     <md-form-field floatPlaceholder="never">
-      <input mdInput #filter placeholder="Filter users">
+      <input mdInput #filter placeholder="Filter users by email and name">
     </md-form-field>
   </div>
   <md-table #table [dataSource]="dataSource" mdSort>
 
-    <!--- Note that these columns can be defined in any order.
-            The actual rendered columns are set as a property on the row definition" -->
+    <!--- Note that these columns can be defined in any order. The actual rendered columns are set as a property on the row definition" -->
 
     <!-- ID Column -->
     <ng-container mdColumnDef="userId">

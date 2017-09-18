@@ -17,6 +17,11 @@ export class AppComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private titleService: Title
   ) {}
+
+  isliked:boolean = false;
+  likeMe(){
+    this.isliked = !this.isliked;
+  }
   ngOnInit() {
     this.router.events
       .filter(event => event instanceof NavigationEnd)
